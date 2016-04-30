@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Josefin sans' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+body {                   
+    background-image: url("../campOpenSource/img/IMG_1622.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+p {
+    font-family: 'Josefin sans', sans-serif;
+    /*font-family: 'Pacifico', cursive;*/
+    text-shadow: 2px 2px #ff0000;
+    height: 720px;
+    width: auto;
+    font-size: 142px;
+    text-align: right;
+    color: white;
+    float: right;
+    margin: 1200px 0 0 0 0;
+}
+
+</style>
+</head>
+
+<body onload="time()">
+
+<p id="txt"> iusgdoiusagou</p>
+
+</body>
+</html>
+<script>
+
+ function time() {
+    
+    var today = new Date();
+    var hours = today.getHours(); 
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    var month= today.getMonth();
+    var day = today.getDay();
+    var dom= today.getDate();
+    var dow= [ 'Sunday ', 'Monday ', 'Tuesday ', 'Wednesday ', 'Thursday ', 'Friday ', 'Saturday '];
+    var year= today.getFullYear();
+    var monthName = ['January ', 'February ', 'March ', 'April ', 'May ', 'June ', 'July ', 'August ', 'September ', 'October ', 'November ', 'December '];
+    var pm= "pm ";
+if (min<10){
+    min = "0" + min;
+}
+if (sec<10){
+    sec = "0" + sec;
+}
+if (hours===0){
+    hours += 12;
+}
+
+if (today.getHours()<12){
+    pm = "am ";
+}
+if (hours>12){
+    hours= hours-12;
+}
+document.getElementById('txt').innerHTML = dow[day] + monthName[month] + dom + "<br>" + year + "<br>" +  hours + ":" + min + ":" + sec + pm;
+setTimeout(time,500);
+}
+
+</script>
