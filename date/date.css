@@ -1,0 +1,17 @@
+body{
+
+background-image: url("../campOpenSource/img/IMG_0281.jpg");
+background-repeat:no-repeat;
+background-size: cover;
+background-position: center center;
+
+}
+
+p {
+	height: 420px;
+	width: 420px;
+	font-size: 42px;
+	text-align: center;
+	color: white;
+	float: right;
+}
